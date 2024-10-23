@@ -7,6 +7,7 @@ import {
   IconBrandInstagram,
   IconBrandTwitter,
 } from "@tabler/icons-react";
+import me from "../../../assets/jpg/me.jpg";
 
 const links = [
   {
@@ -36,7 +37,9 @@ export default function Hero() {
     <div className="relative h-fit bg-white p-8 max-w-6xl mx-auto">
       <div className="relative max-w-6xl mx-auto grid grid-cols-1 gap-8 mb-12">
         <div>
-          <div className="w-48 h-48 bg-lime-200 rounded-full mb-4"></div>
+          <figure className="w-48 h-48 bg-lime-200 rounded-full mb-4">
+            <img src={me} alt="Christian Marín" className="w-full h-full object-cover rounded-full" />
+          </figure>
           <h1>Christian Marín.</h1>
           <h3 className="mb-2">Software Developer / Front-end Developer</h3>
           {links.map((link) => (

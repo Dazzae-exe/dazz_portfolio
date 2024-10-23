@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { ArrowUpRight } from "lucide-react";
 import {
   Dialog,
@@ -9,7 +9,7 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { IconCheck, IconBrandX, IconMessage } from "@tabler/icons-react";
+import { IconBrandX, IconMessage, IconBrandLinkedin } from "@tabler/icons-react";
 import { Link } from "react-router-dom";
 
 export default function FooterContact() {
@@ -41,6 +41,10 @@ export default function FooterContact() {
               <li className="flex items-center">
                 <IconBrandX className="w-4 h-4 mr-2" />
                 <Link to="https://x.com/itsdazzae">itsdazzae</Link>
+              </li>
+              <li className="flex items-center">
+                <IconBrandLinkedin className="w-4 h-4 mr-2" />
+                <Link to="https://linkedin.com/in/christianmarindaza">Christian Marín</Link>
               </li>
             </ul>
           </DialogContent>

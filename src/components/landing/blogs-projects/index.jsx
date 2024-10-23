@@ -5,20 +5,20 @@ import { Badge } from "@/components/ui/badge"
 
 const caseStudies = [
   {
-    title: "Arsport e-Commerce",
-    image: "https://images.unsplash.com/photo-1729097587920-c7412fb244fb?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    tags: ["React", "Tailwindcss", "supabase"],
+    title: "Arsport Nutrition Store",
+    image: "https://www.arsportnutrition.com/assets/LOGO_ARSPORT_NUTRITION_C.A-DkLP2QuB.png",
+    tags: ["React", "Tailwindcss", "Supabase"],
   },
   {
     title: "TBet",
-    image: "https://images.unsplash.com/photo-1486286701208-1d58e9338013?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "https://betting-tanzania.ac.tz/wp-content/uploads/2020/05/tbet-logo-s.jpg",
     tags: ["Betting", "App", "JavaScript", "AngularJS", "HTML&CSS", "Svelte"],
   },
   {
-    title: "Scary Hub",
+    title: "Thrumyeyes",
     image:
-      "https://images.unsplash.com/photo-1729167318434-5cefa05fa3ad?q=80&w=1671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    tags: ["Community", "App", "Social Media", "Streaming", "React", "Supabase"],
+      "https://images.unsplash.com/photo-1729465123592-113326d58c44?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2M3x8fGVufDB8fHx8fA%3D%3D",
+    tags: ["Photography", "Portfolio", "NextJS", "Supabase", "Tailwindcss"],
   },
 ]
 
