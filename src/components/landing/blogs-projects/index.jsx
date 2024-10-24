@@ -1,28 +1,34 @@
 import React from 'react'
 import { Card, CardContent, CardFooter, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { useNavigate } from 'react-router-dom'
 
 
 const caseStudies = [
   {
-    title: "Arsport e-Commerce",
-    image: "https://images.unsplash.com/photo-1729097587920-c7412fb244fb?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    tags: ["React", "Tailwindcss", "supabase"],
+    title: "Arsport Nutrition Store",
+    image: "https://www.arsportnutrition.com/assets/LOGO_ARSPORT_NUTRITION_C.A-DkLP2QuB.png",
+    tags: ["React", "Tailwindcss", "Supabase"],
+    id: "13412lk1k2j42342"
   },
   {
     title: "TBet",
-    image: "https://images.unsplash.com/photo-1486286701208-1d58e9338013?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    image: "https://betting-tanzania.ac.tz/wp-content/uploads/2020/05/tbet-logo-s.jpg",
     tags: ["Betting", "App", "JavaScript", "AngularJS", "HTML&CSS", "Svelte"],
+    id: "13412lk1k2j42343"
   },
   {
-    title: "Scary Hub",
+    title: "Thrumyeyes",
     image:
-      "https://images.unsplash.com/photo-1729167318434-5cefa05fa3ad?q=80&w=1671&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    tags: ["Community", "App", "Social Media", "Streaming", "React", "Supabase"],
+      "https://images.unsplash.com/photo-1729465123592-113326d58c44?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw2M3x8fGVufDB8fHx8fA%3D%3D",
+    tags: ["Photography", "Portfolio", "NextJS", "Supabase", "Tailwindcss"],
+    id: "13412lk1k2j42341"
   },
 ]
 
 export default function BlogsAndProjects() {
+  const navigate = useNavigate();
+
   return (
     <div className="max-w-6xl mx-auto min-h-[50vh] p-8">
       <h2 className='flex items-center mb-6'>
@@ -33,7 +39,7 @@ export default function BlogsAndProjects() {
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {caseStudies.map((study, index) => (
-          <Card key={index} className="bg-gray-100 cursor-pointer">
+          <Card key={index} className="bg-gray-100 cursor-pointer" onClick={() => navigate(`/blog-post/${study.id}`)}>
             <CardContent className="p-6">
               {study.image && (
                 <img src={study.image} alt={study.title} className="w-full h-48 object-cover mb-4 rounded-lg" />
