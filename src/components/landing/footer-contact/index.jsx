@@ -32,7 +32,7 @@ export default function FooterContact() {
       transition: {
         duration: 0.9,
         when: "beforeChildren",
-        staggerChildren: 0.5 * 2,
+        staggerChildren: 0.9 * 2,
       },
     },
   };
@@ -41,13 +41,21 @@ export default function FooterContact() {
     <motion.footer className="min-h-[100vh] w-full flex items-center">
       <div className="container mx-auto text-center bg-background w-full h-screen flex items-center justify-center flex-col">
         <motion.h2
-          className="mb-4 border-b-0"
+          className="border-b-0 flex flex-grow items-end"
           variants={containerItem}
           initial="initial"
           whileInView="onView"
         >
-          Quieres contactarme?
+          Te gustaría contactarme?
         </motion.h2>
+        <motion.p
+          variants={containerItem}
+          initial="initial"
+          whileInView="onView"
+          className="mb-4"
+        >
+          Estoy dispuesto a chatear o reunirnos por videollamada para algún proyecto en mente.
+        </motion.p>
         <Dialog>
           <motion.div
             variants={containerItem}
@@ -95,9 +103,9 @@ export default function FooterContact() {
           variants={containerItem}
           initial="initial"
           whileInView="onView"
-          className="mt-4"
+          className="mt-4 flex flex-grow items-end pb-4"
         >
-          2024 © Christian Marín
+          Aragua, Venezuela | 2024 © Christian Marín
         </motion.p>
       </div>
     </motion.footer>

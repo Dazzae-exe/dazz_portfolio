@@ -50,7 +50,7 @@ export default function Hero() {
               <Skeleton className="w-full h-full rounded-full bg-secondary" />
             )}
           </figure>
-          <h1>Christian Marín.</h1>
+          <h1>Christian Marín</h1>
           <h3 className="mb-2">Software Developer / Front-end Developer</h3>
           {links.map((link) => (
             <Link

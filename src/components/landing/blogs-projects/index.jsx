@@ -11,7 +11,7 @@ const caseStudies = [
     title: "Arsport Nutrition Store",
     image:
       "https://www.arsportnutrition.com/assets/LOGO_ARSPORT_NUTRITION_C.A-DkLP2QuB.png",
-    tags: ["React", "Tailwindcss", "Supabase"],
+    tags: ["React", "Tailwindcss", "Supabase", "NextJS"],
     id: "13412lk1k2j42342",
   },
   {

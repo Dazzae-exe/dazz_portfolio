@@ -80,6 +80,11 @@ export default {
   		},
 		fontFamily: {
 			inter: ['Inter', 'sans-serif'],
+		},
+		screen: {
+			mobile: '460px',
+			'mobile-sm': '400px',
+			'mobile-xs': '360px',
 		}
   	}
   },
