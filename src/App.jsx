@@ -7,6 +7,7 @@ import {
 import Portfolio from "./pages/portfolio";
 import RootLayout from "./layout/root-layout";
 import BlogPost from "./pages/blog-post";
+import { PortfolioContext } from "./context";
 
 const routes = createBrowserRouter(
   createRoutesFromElements(
@@ -18,7 +19,11 @@ const routes = createBrowserRouter(
 );
 
 function App() {
-  return <RouterProvider router={routes} />;
+  return (
+    <PortfolioContext>
+      <RouterProvider router={routes} />
+    </PortfolioContext>
+);
 }
 
 export default App;

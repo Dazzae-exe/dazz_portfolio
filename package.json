@@ -1,7 +1,8 @@
 {
   "name": "chris_portfolio",
-  "private": true,
-  "version": "0.0.0",
+  "private": false,
+  "author": "Dazzae-exe<chrismarin0607@gmail.com>",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -22,6 +23,7 @@
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "framer-motion": "^11.11.9",
+    "lenis": "^1.1.14",
     "lucide-react": "^0.453.0",
     "next-themes": "^0.3.0",
     "react": "^18.3.1",

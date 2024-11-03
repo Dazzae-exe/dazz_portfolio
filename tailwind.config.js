@@ -1,4 +1,6 @@
 /** @type {import('tailwindcss').Config} */
+import TailwindCssAnimate from 'tailwindcss-animate';
+
 export default {
     darkMode: ["class"],
     content: [
@@ -78,8 +80,13 @@ export default {
   		},
 		fontFamily: {
 			inter: ['Inter', 'sans-serif'],
+		},
+		screen: {
+			mobile: '460px',
+			'mobile-sm': '400px',
+			'mobile-xs': '360px',
 		}
   	}
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [TailwindCssAnimate],
 }

@@ -9,34 +9,81 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-import { IconBrandX, IconMessage, IconBrandLinkedin } from "@tabler/icons-react";
+import {
+  IconBrandX,
+  IconMessage,
+  IconBrandLinkedin,
+} from "@tabler/icons-react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 export default function FooterContact() {
+  const containerItem = {
+    initial: {
+      opacity: 0,
+      y: -50,
+      transition: {
+        when: "afterChildren",
+      },
+    },
+    onView: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.9,
+        when: "beforeChildren",
+        staggerChildren: 0.9 * 2,
+      },
+    },
+  };
+
   return (
-    <footer className="rounded-3xl mt-16 min-h-[35vh] w-full flex items-end px-4 py-8">
-      <div className="mx-auto text-center bg-primary text-primary-foreground w-full h-full rounded-xl py-16 shadow-lg">
-        <h2 className="mb-4 border-b-0">
-        Quieres contactarme? 
-        </h2>
+    <motion.footer className="min-h-[100vh] w-full flex items-center">
+      <div className="container mx-auto text-center bg-background w-full h-screen flex items-center justify-center flex-col">
+        <motion.h2
+          className="border-b-0 flex flex-grow items-end"
+          variants={containerItem}
+          initial="initial"
+          whileInView="onView"
+        >
+          Te gustaría contactarme?
+        </motion.h2>
+        <motion.p
+          variants={containerItem}
+          initial="initial"
+          whileInView="onView"
+          className="mb-4"
+        >
+          Estoy dispuesto a chatear o reunirnos por videollamada para algún proyecto en mente.
+        </motion.p>
         <Dialog>
-          <DialogTrigger className={buttonVariants({ variant: "secondary" })}>
-            Entra en contacto
-            <ArrowUpRight className="ml-2 h-4 w-4" />
-          </DialogTrigger>
+          <motion.div
+            variants={containerItem}
+            initial="initial"
+            whileInView="onView"
+          >
+            <DialogTrigger className={buttonVariants({ variant: "default" })}>
+              Entra en contacto
+              <ArrowUpRight className="ml-2 h-4 w-4" />
+            </DialogTrigger>
+          </motion.div>
           <DialogContent>
             <DialogHeader>
               <DialogTitle className="border-b-0">
                 Entra en contacto
               </DialogTitle>
               <DialogDescription>
-                Me encantaría saber de ti. Por favor, dejame un mensaje en mi correo en mi perfil de X para que nos podamos comunicar de manera directa y eficiente.
+                Me encantaría saber de ti. Por favor, dejame un mensaje en mi
+                correo en mi perfil de X para que nos podamos comunicar de
+                manera directa y eficiente.
               </DialogDescription>
             </DialogHeader>
             <ul>
               <li className="flex items-center">
                 <IconMessage className="w-4 h-4 mr-2" />
-                <Link to="mailto:chrismarin0607@gmail.com">chrismarin0607@gmail.com</Link>
+                <Link to="mailto:chrismarin0607@gmail.com">
+                  chrismarin0607@gmail.com
+                </Link>
               </li>
               <li className="flex items-center">
                 <IconBrandX className="w-4 h-4 mr-2" />
@@ -44,14 +91,23 @@ export default function FooterContact() {
               </li>
               <li className="flex items-center">
                 <IconBrandLinkedin className="w-4 h-4 mr-2" />
-                <Link to="https://linkedin.com/in/christianmarindaza">Christian Marín</Link>
+                <Link to="https://linkedin.com/in/christianmarindaza">
+                  Christian Marín
+                </Link>
               </li>
             </ul>
           </DialogContent>
         </Dialog>
 
-        <p className="mt-4">2024 © Christian Marín</p>
+        <motion.p
+          variants={containerItem}
+          initial="initial"
+          whileInView="onView"
+          className="mt-4 flex flex-grow items-end pb-4"
+        >
+          Aragua, Venezuela | 2024 © Christian Marín
+        </motion.p>
       </div>
-    </footer>
+    </motion.footer>
   );
 }
